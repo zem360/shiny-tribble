@@ -1,0 +1,62 @@
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, TimestampType, DateType, BooleanType
+
+manufacturing_schema = StructType([
+    StructField("timestamp", TimestampType(), True),
+    StructField("factory_id", StringType(), True),
+    StructField("line_id", StringType(), True),
+    StructField("shift", StringType(), True),
+    StructField("product_id", StringType(), True),
+    StructField("order_id", StringType(), True),
+    StructField("planned_qty", IntegerType(), True),
+    StructField("produced_qty", IntegerType(), True),
+    StructField("scrap_qty", IntegerType(), True),
+    StructField("defects_count", IntegerType(), True),
+    StructField("defect_type", StringType(), True),
+    StructField("cycle_time_s", DoubleType(), True),
+    StructField("oee", DoubleType(), True),
+    StructField("availability", DoubleType(), True),
+    StructField("performance", DoubleType(), True),
+    StructField("quality", DoubleType(), True),
+    StructField("machine_state", StringType(), True),
+    StructField("downtime_reason", StringType(), True),
+    StructField("maintenance_type", StringType(), True),
+    StructField("maintenance_due_date", DateType(), True),
+    StructField("vibration_mm_s", DoubleType(), True),
+    StructField("temperature_c", DoubleType(), True),
+    StructField("pressure_bar", DoubleType(), True),
+    StructField("energy_kwh", DoubleType(), True),
+    StructField("operator_id", StringType(), True),
+    StructField("workorder_status", StringType(), True),
+])
+
+maintenance_schema = StructType([
+    StructField("event_id", StringType(), True),
+    StructField("factory_id", StringType(), True),
+    StructField("line_id", StringType(), True),
+    StructField("maintenance_type", StringType(), True),
+    StructField("reason", StringType(), True),
+    StructField("start_time", TimestampType(), True),
+    StructField("end_time", TimestampType(), True),
+    StructField("downtime_min", IntegerType(), True),
+    StructField("technician_id", StringType(), True),
+    StructField("parts_used", StringType(), True),
+    StructField("cost_eur", DoubleType(), True),
+    StructField("outcome", StringType(), True),
+    StructField("next_due_date", DateType(), True),
+])
+
+operator_schema = StructType([
+    StructField("operator_id", StringType(), True),
+    StructField("name", StringType(), True),
+    StructField("factory_id", StringType(), True),
+    StructField("primary_line", StringType(), True),
+    StructField("primary_shift", StringType(), True),
+    StructField("skill_level", StringType(), True),
+    StructField("certifications", StringType(), True),
+    StructField("team", StringType(), True),
+    StructField("hire_date", DateType(), True),
+    StructField("overtime_eligible", BooleanType(), True),
+    StructField("hourly_rate_eur", DoubleType(), True),
+    StructField("reliability_score", DoubleType(), True),
+])
+
