@@ -1,0 +1,36 @@
+# --- Python Environment ---
+venv/
+env/
+.venv/
+.env
+bin/
+lib/
+develop-eggs/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Data Files ---
+data/raw/
+data/output/
+*.csv
+*.parquet
+*.json
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+.virtual_env/
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
