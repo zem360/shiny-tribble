@@ -1,4 +1,13 @@
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, TimestampType, DateType, BooleanType
+from pyspark.sql.types import (
+    StructType, 
+    StructField, 
+    StringType, 
+    IntegerType, 
+    DoubleType, 
+    TimestampType, 
+    DateType, 
+    BooleanType, 
+    LongType)
 
 manufacturing_schema = StructType([
     StructField("timestamp", TimestampType(), True),
@@ -60,3 +69,20 @@ operator_schema = StructType([
     StructField("reliability_score", DoubleType(), True),
 ])
 
+fact_production_schema = StructType([
+    StructField("production_event_key", StringType(), True),
+    StructField("timestamp", TimestampType(), True),
+    StructField("factory_id", StringType(), True),
+    StructField("line_id", StringType(), True),
+    StructField("operator_id", StringType(), True),
+    StructField("product_id", StringType(), True),
+    StructField("produced_qty", LongType(), True),
+    StructField("scrap_qty", LongType(), True),
+    StructField("oee", DoubleType(), True),
+    StructField("energy_kwh", DoubleType(), True),
+    StructField("vibration_mm_s", DoubleType(), True),
+    StructField("operator_skill", StringType(), True),
+    StructField("is_maintenance_active", BooleanType(), True),
+    StructField("maintenance_event_id", StringType(), True),
+    StructField("maintenance_type", StringType(), True)
+])
