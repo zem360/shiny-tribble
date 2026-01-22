@@ -20,11 +20,8 @@ __pycache__/
 *$py.class
 
 # --- Data Files ---
-data/raw/
 data/output/
-*.csv
-*.parquet
-*.json
+
 
 # --- Notebooks ---
 .ipynb_checkpoints/
