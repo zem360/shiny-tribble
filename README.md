@@ -44,7 +44,7 @@ To solve the given problems I made use of Jupyter Notebook for the data detectiv
 
 ## Data Detective
 
-To answer the analytics questions I made use of a Jupyter Notebook(`notebooks/exploration.ipynb`), and running duckdb as my SQL engine. I used the CSV files and registered them as views in duckdb and querying them to answer the question.
+To answer the analytics questions I made use of a Jupyter Notebook ([View the Exploratory Data Analysis](notebooks/exploration.ipynb)), and running duckdb as my SQL engine. I used the CSV files and registered them as views in duckdb and querying them to answer the question.
 
 Before jumping into the queries directly I performed some basic checks on the data to get an idea of the dataset. I made sure that there were no NULL values for *event_id*, double checked the data types of each columns to confirm timestamps were cast as *timestamps* and *cost_euro* column was cast as float etc.
 
